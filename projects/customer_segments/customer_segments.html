@@ -13496,13 +13496,13 @@ Yes, there are five data points which are outliers for more than one feature [65
 </li>
 <li><p>The first 4 principal components explain (70.68% + 12.31% + 10.12%) 93.11% of the variance in the data.</p>
 </li>
-<li><p>A customer with higher values on the first dimension would spend much more on Detergents_Paper, also on Milk and Groceries.This could represent a convinience store. <strong>negative correlations</strong></p>
+<li><p>First principal component most prominently represents Detergents_Paper, but also provides information Gain for Milk, Grocery and Delicatassen to some extent. However, it badly predicts Fresh and Frozen categories and needs another component to help. This could represent the convenience or supermarket spending category.</p>
 </li>
-<li><p>While on the second dimension would spend more on Freshs, and relatively equal on Frozen and Delicatessen. This could represent a restaurant. <strong>negative correlations</strong></p>
+<li><p>Second one allows for the recovery of Information Gain for Fresh and Frozen features, and supplements Delicatessen. It provides small gains for Milk and Grocery, and a very small loss of Detergents_Paper. This could represent customers who are in the hospitality or restaurant industry.</p>
 </li>
-<li><p>On the third dimension -There are nearly equal features in both directions- would spend high value on Delicatessen, medium on Frozen and very low on Fresh as <strong>positive weighted features</strong> and spend high value on Fresh, low on Detergents and very low on Fresh as <strong>negative weighted features</strong>.</p>
+<li><p>While third principal component represents gains for Fresh and Detergents_Paper, and losses for other categories. This could represent smaller corner shops, with convenience items and small amounts of groceries.</p>
 </li>
-<li><p>Finally, a customer with higher fourth dimension values would spend heavily on Milk, some on Detergents_paper, and very little in Grocery. This could represent a coffee shop. <strong>negative correlations</strong></p>
+<li><p>Finally the forth represents Frozen and Detergents_Paper, and losses for other categories. This could represent bulk buyers of frozen goods, such as fish importers.</p>
 </li>
 </ul>
 
