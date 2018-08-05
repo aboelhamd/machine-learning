@@ -44,6 +44,13 @@ class LearningAgent(Agent):
             self.alpha = 0
         else:
             #self.epsilon = self.epsilon - 0.05
+	    # This is the same as e^(-at) where t is the trials
+	    # but this is without introducing new parameters
+	    # in the first iteration epsilon = 1 and its new
+            # value will be = epsilon * e^(-a) = e^(-a)
+            # 2nd iteration will be = epsilon * e^(-a) = e^(-a) * e^(-a) = e^(-2a)
+	    # 3nd iteration will be = e^(-3a)
+	    # and so on ...
             self.epsilon = self.epsilon * math.exp(-self.alpha)
 
         return None
@@ -203,7 +210,7 @@ def run():
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
 
-    sim = Simulator(env, update_delay=0.0, log_metrics=True, optimized=True, display = False)
+    sim = Simulator(env, update_delay=0.01, log_metrics=True, optimized=True, display = False)
     
     ##############
     # Run the simulator
